@@ -8,4 +8,8 @@
  7. set children routes
  8. set links on the header components
 
+
+ Context API
+ 1. Declare a context
+ 2. Set provider
 */
