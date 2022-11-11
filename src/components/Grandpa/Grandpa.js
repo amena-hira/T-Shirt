@@ -4,20 +4,22 @@ import Father from '../Father/Father';
 import Uncle from '../Uncle/Uncle';
 import './Grandpa.css';
 
-const RingContext = createContext('Gold Ring'); 
+export const RingContext = createContext('Gold Ring'); 
 
 const Grandpa = () => {
     const house = 7;
     const ring = 'Diamond ring';
     return (
-        <div className='grandpa'>
-            <h2>Grandpa</h2>
-            <section className='flex'>
-                <Father house={house} ring = {ring}></Father>
-                <Uncle house={house}></Uncle>
-                <Aunty house={house}></Aunty>
-            </section>
-        </div>
+        <RingContext.Provider value='dadur ring'>
+            <div className='grandpa'>
+                <h2>Grandpa</h2>
+                <section className='flex'>
+                    <Father house={house} ring = {ring}></Father>
+                    <Uncle house={house}></Uncle>
+                    <Aunty house={house}></Aunty>
+                </section>
+            </div>
+        </RingContext.Provider>
     );
 };
 
